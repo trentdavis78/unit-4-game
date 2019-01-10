@@ -27,6 +27,10 @@ body {
     padding: 1.5rem;
     font-size: 1.1rem;
 }
+.collected {
+    height: 25px;
+    margin-right: 5px;
+}
 .randomNum, .totalScore {
     background: teal;
     font-size: 3rem;

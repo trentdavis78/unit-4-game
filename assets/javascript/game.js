@@ -7,6 +7,8 @@ $(document).ready(function(){
     var gems = {};
     var uniqueRanImg = [];
     var uniqueRanGem = [];
+    var collected;
+    var newArr;
     // inital game html reset win/loss
     $("#win").text("0");
     $("#loss").text("0");
@@ -17,6 +19,8 @@ $(document).ready(function(){
     }
     // function to reset all values except wins/losses
     function resetValues() {
+        // reset gem values so it's possible to get back to back games with the same value
+        uniqueRanGem = [];
         // function to generate unique random numbers; takes params: quantity of random nums & empty array var
         function makeUniqueRandom(num, arr) {            
             // refill the array if needed
@@ -33,7 +37,7 @@ $(document).ready(function(){
         }
         // function for generating random crystals   
         var imgID = 0;
-        $("img").each(function(){  
+        $(".gems img").each(function(){  
             // increment the imgID on each iteration
             imgID++;
             // retrieve a random and unique number between 0 and 4       
@@ -60,7 +64,8 @@ $(document).ready(function(){
         
         // loop thru gems obj and set key value pairs with unique random number from makeUniqueRandom function
         for(var j = 1; j < 5; j++){
-            gems['index_' + j] = makeUniqueRandom(12,uniqueRanGem) + 1;                   
+            gems['index_' + j] = makeUniqueRandom(12,uniqueRanGem) + 1;     
+                          
         }   
     }
     // start initial game
@@ -92,13 +97,35 @@ $(document).ready(function(){
             win++;
             $("#win").text(win);
             alert("You Win!");
+            collectCrystals();
             resetValues();
         } 
         else if(total > random) {
             loss++;
             $("#loss").text(loss);
-            alert("You lose");
+            alert("You lose");            
             resetValues();
+        }
+    }    
+    function collectCrystals() {
+        collected = [];
+        newArr = [];
+     for(k=1; k<5; k++){        
+       var src =  $("#gem-" + k).attr("src");
+       var style = $("#gem-" + k).attr("style");
+       newArr.push([src,style]);       
+     }
+        collected.push(newArr);
+        printCollected(collected);
+    }
+    function printCollected(collected) {
+        for(l=0; l < collected.length; l++){
+            for(m=0; m < collected[l].length; m++){
+                var newImg = $('<img class="collected">');
+                newImg.attr('src', collected[l][m][0])
+                newImg.attr('style', collected[l][m][1])               
+                newImg.appendTo("#collection");                          
+            }
         }
     }
 });
