@@ -27,6 +27,19 @@ body {
     padding: 1.5rem;
     font-size: 1.1rem;
 }
+.instructions h3 {
+    display: inline;
+}
+.collapse-caret {
+    color: #fff;
+    float: right;
+}
+.collapse-caret:hover {
+    color: #A82281;
+}
+.collapse p:first-of-type {
+    margin-top: 20px;
+}
 .collected {
     height: 30px;
     margin: 5px;

@@ -8,6 +8,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" 
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     
 </head>
@@ -21,6 +23,11 @@
            </div>
            <div class="row">
                <div class="col-6 instructions">
+                   <h3>Instructions</h3>
+                    <a class="collapse-caret" data-toggle="collapse" href="#collapseInstructions" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <i class="far fa-caret-square-down"></i>
+                          </a>
+                   <div class="collapse" id="collapseInstructions">
                    <p>You will be given a random number at the start of the game.</p>
                    <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
                    <p>The value of each crystal is hidden from you until you click on it.</p>
@@ -29,6 +36,7 @@
                    <p>If you win, you only collect the crystals that you clicked on</p>                   
                    <p>Each time the game starts, the game will change the value of the crystals.</p>
                    <p>There are over 1400 different crystals to collect</p>
+                   </div>
                </div>
                <div class="col-6 collectedCrystals">
                    <h3>My Collection:</h3>
