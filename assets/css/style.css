@@ -1,7 +1,12 @@
-.body-bg {
+body {
     background-image: url('../images/houndstooth-pattern.png');
-    background-repeat: repeat;
-   
+    background-repeat: repeat;   
+    overflow: hidden;    
+}
+.header {
+    background: #0342dc;
+    padding: 1rem 2rem;
+    color: #fff;
 }
 .body-content {
  background: #f3f3f3;
@@ -40,4 +45,9 @@
 .totalScore {
     margin: 20px 0;
     padding: 1rem 2rem;
+}
+.footer {
+    background: #efc902;
+    min-height: 100px;
+    overflow: hidden;
 }
