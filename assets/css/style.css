@@ -6,6 +6,9 @@
 .body-content {
  background: #f3f3f3;
 }
+.gems {
+    min-height: 115px;
+}
 .gems img {
     margin: 20px;
     cursor: pointer;
