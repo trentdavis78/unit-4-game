@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Crystals Collector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" 
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    
+</head>
+<body>
+   <div class="row body-bg">
+       <div class="container body-content">
+           <div class="row">
+                <div class="col-12">
+                   <h1>CrystalsCollector</h1>
+                </div>
+           </div>
+           <div class="row">
+               <div class="col-6 instructions">
+                   <p>You will be given a random number at the start of the game.</p>
+                   <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+                   <p>You win the game by matching your total score to the random number, 
+                       you lose the game if your total score goes above the random number</p>
+                   <p>The value of each crystal is hidden from you until you click on it.</p>
+                   <p>Each time the game starts, the game will change the value of the crystals.</p>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-4 randomNum"><span id="random">999</span></div>
+               <div class="col-2 scoreboard">
+                   <label>Wins: </label><span id="win">99</span><br>
+                   <label>Losses: </label><span id="loss">99</span>
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-12 gems">
+                   <img src="assets/images/gem1.png" id="gem-1" />
+                   <img src="assets/images/gem2.png" id="gem-2" />
+                   <img src="assets/images/gem3.png" id="gem-3" />
+                   <img src="assets/images/gem4.png" id="gem-4" />
+               </div>
+           </div>
+           <div class="row">
+               <div class="col-4">Your total score is:</div>
+           </div>
+           <div class="row">
+                <div class="col-4 totalScore"><span id="total">999</span></div>
+            </div>
+       </div>
+   </div> 
+
+<!-- js files -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" 
+integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" 
+integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="assets/javascript/game.js"></script>   
+</body>
+</html>

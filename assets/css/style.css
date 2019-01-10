@@ -1,0 +1,40 @@
+.body-bg {
+    background-image: url('../images/houndstooth-pattern.png');
+    background-repeat: repeat;
+   
+}
+.body-content {
+ background: #f3f3f3;
+}
+.gems img {
+    margin: 20px;
+    cursor: pointer;
+}
+.gems img:hover {
+    
+}
+.instructions {
+    background: #666;
+    color: #fff;
+    padding: 1.5rem;
+    font-size: 1.1rem;
+}
+.randomNum, .totalScore {
+    background: teal;
+    font-size: 3rem;
+    color: #fff;
+    
+}
+.scoreboard {
+    background: #A82281;
+    padding: 1rem 2rem;
+    color: #fff;
+    font-weight: bold;
+}
+.scoreboard span {
+    float: right;
+}
+.totalScore {
+    margin: 20px 0;
+    padding: 1rem 2rem;
+}
