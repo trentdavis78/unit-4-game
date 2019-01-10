@@ -52,8 +52,10 @@ $(document).ready(function(){
             $("#gem-" + imgID).css({
                 'filter': hueRotateSaturate,
                 '-webkit-filter':  hueRotateSaturate            
-            });           
-        });
+            }); 
+            $("#gem-" + imgID).attr("data-clicked", "0")         
+        });   
+
         // reset total to 0 and print to html
         total = 0;
         $("#total").text(total);
@@ -74,21 +76,25 @@ $(document).ready(function(){
     $("#gem-1").on("click", function(){
         total = total + gems.index_1;
         $("#total").text(total);  
+        $("#gem-1").attr("data-clicked", "1");
         checkWin();      
     });
     $("#gem-2").on("click", function(){
         total = total + gems.index_2;
         $("#total").text(total);    
+        $("#gem-2").attr("data-clicked", "1");
         checkWin();        
     });
     $("#gem-3").on("click", function(){
         total = total + gems.index_3;
         $("#total").text(total);  
+        $("#gem-3").attr("data-clicked", "1");
         checkWin();          
     });
     $("#gem-4").on("click", function(){
         total = total + gems.index_4;
         $("#total").text(total);  
+        $("#gem-4").attr("data-clicked", "1");
         checkWin();          
     });
     // function to check if game has been won
@@ -110,10 +116,13 @@ $(document).ready(function(){
     function collectCrystals() {
         collected = [];
         newArr = [];
-     for(k=1; k<5; k++){        
-       var src =  $("#gem-" + k).attr("src");
-       var style = $("#gem-" + k).attr("style");
-       newArr.push([src,style]);       
+     for(k=1; k<5; k++){ 
+        var gemIter = $("#gem-" + k);
+         if(gemIter.attr("data-clicked") == 1) {
+            var src = gemIter.attr("src");
+            var style = gemIter.attr("style");
+            newArr.push([src,style]); 
+         }              
      }
         collected.push(newArr);
         printCollected(collected);
