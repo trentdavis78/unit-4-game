@@ -4,10 +4,9 @@ $(document).ready(function(){
     var loss = 0;
     var total = 0;
     var random;
-    var gem1;
-    var gem2;
-    var gem3;
-    var gem4;
+    var gems = {};
+    var uniqueRanImg = [];
+    var uniqueRanGem = [];
     // inital game html reset win/loss
     $("#win").text("0");
     $("#loss").text("0");
@@ -16,29 +15,40 @@ $(document).ready(function(){
     function getRandom(min, max) {
         return Math.floor(Math.random() * (max - min) + min);
     }
+    // function to reset all values except wins/losses
     function resetValues() {
-        // set image ids with unique random number function
-        var uniqueRandoms = [];
-        var numRandoms;
-        function makeUniqueRandom(num) {
-            numRandoms = num;
+        // function to generate unique random numbers; takes params: quantity of random nums & empty array var
+        function makeUniqueRandom(num, arr) {            
             // refill the array if needed
-            if (!uniqueRandoms.length) {
-                for (var i = 0; i < numRandoms; i++) {
-                    uniqueRandoms.push(i);
+            if (!arr.length) {
+                for (var i = 0; i < num; i++) {
+                    arr.push(i);
                 }
             }
-            var index = Math.floor(Math.random() * uniqueRandoms.length);
-            var val = uniqueRandoms[index];
+            var index = Math.floor(Math.random() * arr.length);
+            var val = arr[index];
             // now remove that value from the array
-            uniqueRandoms.splice(index, 1);
+            arr.splice(index, 1);
             return val;
         }
+        // function for generating random crystals   
         var imgID = 0;
         $("img").each(function(){  
-            imgID++;        
-            var randomID = makeUniqueRandom(4);              
+            // increment the imgID on each iteration
+            imgID++;
+            // retrieve a random and unique number between 0 and 4       
+            var randomID = makeUniqueRandom(4,uniqueRanImg);
+            // retrieve a random number between 0 and 360
+            var randomHue = getRandom(0,360);  
+            // create the css for hue-rotate and add the random 0-360 to it; increase saturation
+            var hueRotateSaturate = "hue-rotate(" + randomHue + "deg) saturate(2)";  
+            // loop thru IMG tags and set image ids/src attr with unique random number from makeUniqueRandom function                
             $("#gem-" + imgID).attr("src", "assets/images/gem" + randomID + ".png");
+            // loop thru each IMG tag and put inline CSS for hue-rotate and saturate
+            $("#gem-" + imgID).css({
+                'filter': hueRotateSaturate,
+                '-webkit-filter':  hueRotateSaturate            
+            });           
         });
         // reset total to 0 and print to html
         total = 0;
@@ -47,32 +57,32 @@ $(document).ready(function(){
         random = getRandom(19,120);
         $("#random").text(random);
         // generate crystal values
-        gem1 = getRandom(1,12);
-        gem2 = getRandom(1,12);
-        gem3 = getRandom(1,12);
-        gem4 = getRandom(1,12);  
-    
+        
+        // loop thru gems obj and set key value pairs with unique random number from makeUniqueRandom function
+        for(var j = 1; j < 5; j++){
+            gems['index_' + j] = makeUniqueRandom(12,uniqueRanGem) + 1;                   
+        }   
     }
     // start initial game
     resetValues();
     // onclick events for crystals --> add gem vars to total --> check if game has won/lost
     $("#gem-1").on("click", function(){
-        total = total + gem1;
+        total = total + gems.index_1;
         $("#total").text(total);  
         checkWin();      
     });
     $("#gem-2").on("click", function(){
-        total = total + gem2;
+        total = total + gems.index_2;
         $("#total").text(total);    
         checkWin();        
     });
     $("#gem-3").on("click", function(){
-        total = total + gem3;
+        total = total + gems.index_3;
         $("#total").text(total);  
         checkWin();          
     });
     $("#gem-4").on("click", function(){
-        total = total + gem4;
+        total = total + gems.index_4;
         $("#total").text(total);  
         checkWin();          
     });
