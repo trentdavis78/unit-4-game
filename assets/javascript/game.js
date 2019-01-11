@@ -110,7 +110,6 @@ $(document).ready(function(){
             loss++;
             $("#loss").text(loss);
             alert("You lose");  
-            collectCrystals();          
             resetValues();
         }
     } 
