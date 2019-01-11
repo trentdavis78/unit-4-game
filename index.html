@@ -10,6 +10,7 @@
     integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
     integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fascinate" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     
 </head>
@@ -18,37 +19,56 @@
        <div class="container body-content">
            <div class="row">
                 <div class="col-6 header">
+                   <i class="fas fa-gem"></i>
                    <h1>Crystals Collector</h1>
+                </div>
+                <div class="col-6">
+                    <a href="#" class="instructLink" data-toggle="modal" data-target="#instructionsModal">
+                            <i class="fas fa-question-circle"></i>
+                            Instructions</a>
                 </div>
            </div>
            <div class="row">
-               <div class="col-6 instructions">
-                   <h3>Instructions</h3>
-                    <a class="collapse-caret" data-toggle="collapse" href="#collapseInstructions" role="button" aria-expanded="false" aria-controls="collapseExample">
-                            <i class="far fa-caret-square-down"></i>
-                          </a>
-                   <div class="collapse" id="collapseInstructions">
-                   <p>You will be given a random number at the start of the game.</p>
-                   <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
-                   <p>The value of each crystal is hidden from you until you click on it.</p>
-                   <p>You collect crystals by matching your total score to the random number, 
-                       you lose the game if your total score goes above the random number</p>
-                   <p>If you win, you only collect the crystals that you clicked on</p>                   
-                   <p>Each time the game starts, the game will change the value of the crystals.</p>
-                   <p>There are over 1400 different crystals to collect</p>
-                   </div>
-               </div>
-               <div class="col-6 collectedCrystals">
-                   <h3>My Collection:</h3>
-                   <div id="collection"></div>
-               </div>
+                <!-- Modal -->
+                    <div class="modal fade" id="instructionsModal" tabindex="-1" role="dialog" aria-labelledby="instructionsModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="instructionsModalLabel">Instructions</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body">
+                                    <p>You will be given a random number at the start of the game.</p>
+                                    <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+                                    <p>The value of each crystal is hidden from you until you click on it.</p>
+                                    <p>You collect crystals by matching your total score to the random number, 
+                                        you lose the game if your total score goes above the random number</p>
+                                    <p>If you win, you only collect the crystals that you clicked on</p>                   
+                                    <p>Each time the game starts, the game will change the value of the crystals.</p>
+                                    <p>There are over 1400 different crystals to collect</p>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>                            
+                            </div>
+                        </div>
+                        </div>
+                    </div>              
            </div>
            <div class="row">
-               <div class="col-4 randomNum"><span id="random"></span></div>
-               <div class="col-2 scoreboard">
+               <div class="col-4 randomNum mh-96"><span id="random"></span></div>
+               <div class="col-2 scoreboard mh-96">
                    <label>Wins: </label><span id="win"></span><br>
                    <label>Losses: </label><span id="loss"></span>
                </div>
+               <div class="col-6">
+                    <div class="collectedCrystals">
+                         <h3>My Collection:</h3>
+                         <div id="collection"></div>
+                    </div>
+                    
+                </div>
            </div>
            <div class="row">
                <div class="col-12 gems">

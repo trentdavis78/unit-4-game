@@ -3,10 +3,14 @@ body {
     background-repeat: repeat;   
     overflow-x: hidden;
 }
-.header {
-    background: #0342dc;
+.header {    
     padding: 1rem 2rem;
-    color: #fff;
+    font-size: 2rem;
+    color: teal;    
+}
+.header h1 {
+    display: inline;
+    font-family: 'Fascinate', cursive;
 }
 .body-content {
  background: #f3f3f3;
@@ -22,33 +26,32 @@ body {
     
 }
 .instructions {
-    background: #666;
-    color: #fff;
     padding: 1.5rem;
     font-size: 1.1rem;
 }
-.instructions h3 {
-    display: inline;
-}
-.collapse-caret {
-    color: #fff;
+.instructLink {
     float: right;
-}
-.collapse-caret:hover {
-    color: #A82281;
-}
-.collapse p:first-of-type {
+    color: teal;
     margin-top: 20px;
+    margin-right: 40px;
 }
 .collected {
     height: 30px;
     margin: 5px;
+}
+.collectedCrystals {
+    padding: 1rem;    
+    
+    
 }
 .randomNum, .totalScore {
     background: teal;
     font-size: 3rem;
     color: #fff;
     
+}
+.mh-96 {
+    max-height: 96px;
 }
 .scoreboard {
     background: #A82281;

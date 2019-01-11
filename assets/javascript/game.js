@@ -112,7 +112,8 @@ $(document).ready(function(){
             alert("You lose");            
             resetValues();
         }
-    }    
+    } 
+    // function to collect crystals   
     function collectCrystals() {
         collected = [];
         newArr = [];
@@ -127,6 +128,7 @@ $(document).ready(function(){
         collected.push(newArr);
         printCollected(collected);
     }
+    // function to print collected crystals to HTML
     function printCollected(collected) {
         for(l=0; l < collected.length; l++){
             for(m=0; m < collected[l].length; m++){
