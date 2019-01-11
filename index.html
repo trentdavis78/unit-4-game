@@ -15,80 +15,87 @@
     
 </head>
 <body>
-   <div class="row">
-       <div class="container body-content">
-           <div class="row">
-                <div class="col-6 header">
-                   <i class="fas fa-gem"></i>
-                   <h1>Crystals Collector</h1>
+    <div class="container body-content">
+        <div class="row">
+            <div class="col-6-lg col-12-sm header">
+                <i class="fas fa-gem"></i>
+                <h1>Crystals Collector</h1>
+            </div>
+            <div class="col-6 instructions d-none d-sm-none d-md-block">
+                <a href="#" class="instructLink" data-toggle="modal" data-target="#instructionsModal">
+                        <i class="fas fa-question-circle"></i>
+                Instructions</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <div class="row">
+                    <div class="col-12"> 
+                        <div class="row">
+                            <div class="col-8 randomNum"><span id="random">99</span></div>
+                            <div class="col-4 scoreboard">
+                                <label>Wins: </label><span id="win"></span><br>
+                                <label>Losses: </label><span id="loss"></span>
+                            </div>
+                        </div>                        
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col-12 gems">
+                        <img src="" id="gem-1" data-clicked="0" />
+                        <img src="" id="gem-2" data-clicked="0" />
+                        <img src="" id="gem-3" data-clicked="0" />
+                        <img src="" id="gem-4" data-clicked="0" />
+                    </div>
                 </div>
-                <div class="col-6">
-                    <a href="#" class="instructLink" data-toggle="modal" data-target="#instructionsModal">
-                            <i class="fas fa-question-circle"></i>
-                            Instructions</a>
+                <div class="row">
+                    <div class="col-12 totalLabel">
+                        Your total score is:
+                    </div>
                 </div>
-           </div>
-          
-                <!-- Modal -->
-                    <div class="modal fade" id="instructionsModal" tabindex="-1" role="dialog" aria-labelledby="instructionsModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                            <h5 class="modal-title" id="instructionsModalLabel">Instructions</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            </div>
-                            <div class="modal-body">
-                                    <p>You will be given a random number at the start of the game.</p>
-                                    <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
-                                    <p>The value of each crystal is hidden from you until you click on it.</p>
-                                    <p>You collect crystals by matching your total score to the random number, 
-                                        you lose the game if your total score goes above the random number</p>
-                                    <p>If you win, you only collect the crystals that you clicked on</p>                   
-                                    <p>Each time the game starts, the game will change the value of the crystals.</p>
-                                    <p>There are over 1400 different crystals to collect</p>
-                            </div>
-                            <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>                            
-                            </div>
-                        </div>
+                <div class="row">
+                    <div class="col-12 totalScore"><span id="total">99</span></div>                    
+                </div>
+            </div> <!-- END LEFT COLUMN-->
+            <div class="col-lg-6 col-sm-12">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="collectedCrystals">
+                                <h3>My Collection:</h3>
+                                <div id="collection"></div>
                         </div>
                     </div>
-                    <!-- end Modal               -->
-        
-
-           <div class="row">
-               <div class="col-4 randomNum mh-96"><span id="random"></span></div>
-               <div class="col-2 scoreboard mh-96">
-                   <label>Wins: </label><span id="win"></span><br>
-                   <label>Losses: </label><span id="loss"></span>
-               </div>
-               <div class="col-6">
-                    <div class="collectedCrystals">
-                         <h3>My Collection:</h3>
-                         <div id="collection"></div>
-                    </div>
-                    
-                </div>
-           </div>
-           <div class="row">
-               <div class="col-12 gems">
-                   <img src="" id="gem-1" data-clicked="0" />
-                   <img src="" id="gem-2" data-clicked="0" />
-                   <img src="" id="gem-3" data-clicked="0" />
-                   <img src="" id="gem-4" data-clicked="0" />
-               </div>
-           </div>
-           <div class="row">
-               <div class="col-4">Your total score is:</div>
-           </div>
-           <div class="row">
-                <div class="col-4 totalScore"><span id="total"></span></div>
-            </div> 
-        </div>              
-   </div> 
-   
+                </div>               
+            </div><!-- END RIGHT COLUMN -->      
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="instructionsModal" tabindex="-1" role="dialog" aria-labelledby="instructionsModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="instructionsModalLabel">Instructions</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                    <p>You will be given a random number at the start of the game.</p>
+                    <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+                    <p>The value of each crystal is hidden from you until you click on it.</p>
+                    <p>You collect crystals by matching your total score to the random number, 
+                        you lose the game if your total score goes above the random number</p>
+                    <p>If you win, you only collect the crystals that you clicked on</p>                   
+                    <p>Each time the game starts, the game will change the value of the crystals.</p>
+                    <p>There are over 1400 different crystals to collect</p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>                            
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- end Modal               --> 
 <!-- js files -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
 integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

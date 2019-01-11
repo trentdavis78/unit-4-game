@@ -40,18 +40,13 @@ body {
     margin: 5px;
 }
 .collectedCrystals {
-    padding: 1rem;    
-    
-    
+    padding: 1rem;       
 }
 .randomNum, .totalScore {
     background: teal;
     font-size: 3rem;
     color: #fff;
     
-}
-.mh-96 {
-    max-height: 96px;
 }
 .scoreboard {
     background: #A82281;
@@ -63,11 +58,11 @@ body {
     float: right;
 }
 .totalScore {
-    margin: 20px 0;
+    margin: 0 0 20px 0;
     padding: 1rem 2rem;
 }
-.footer {
+.totalLabel {
     background: #efc902;
-    min-height: 100px;
-    overflow: hidden;
+    font-weight: bold;
+
 }

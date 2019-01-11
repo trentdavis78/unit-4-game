@@ -109,7 +109,8 @@ $(document).ready(function(){
         else if(total > random) {
             loss++;
             $("#loss").text(loss);
-            alert("You lose");            
+            alert("You lose");  
+            collectCrystals();          
             resetValues();
         }
     } 
