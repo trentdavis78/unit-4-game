@@ -101,15 +101,13 @@ $(document).ready(function(){
     function checkWin() {
         if(total == random) {
             win++;
-            $("#win").text(win);
-            alert("You Win!");
+            $("#win").text(win);            
             collectCrystals();
             resetValues();
         } 
         else if(total > random) {
             loss++;
-            $("#loss").text(loss);
-            alert("You lose");  
+            $("#loss").text(loss);            
             resetValues();
         }
     } 

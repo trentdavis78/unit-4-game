@@ -61,13 +61,16 @@ a {
 }
 .collectedCrystals label {
     float: right;
-    margin: 0;
+    margin: 8px 8px 0 0;
+    color: #A82281;
+}
+.randomNum {
+    padding-top: .4rem;
 }
 .randomNum, .totalScore {
     background: teal;
     font-size: 3rem;
-    color: #fff;
-    
+    color: #fff;   
 }
 .scoreboard {
     background: #A82281;
@@ -85,5 +88,17 @@ a {
 .totalLabel {
     background: #efc902;
     font-weight: bold;
-
+}
+.footer {
+    background: #f3f3f3;
+    color: teal;
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 5px solid #d6d6d5;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.heart {
+    color: #A82281;
+    font-size: 1.25rem;
 }
