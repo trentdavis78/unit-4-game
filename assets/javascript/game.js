@@ -73,24 +73,48 @@ $(document).ready(function(){
     // start initial game
     resetValues();
     // onclick events for crystals --> add gem vars to total --> check if game has won/lost
+    $("#gem-1").mousedown(function() {       
+        $("#gem-1").addClass("imgClick");
+      });
+    $("#gem-1").mouseup(function() {      
+        $("#gem-1").removeClass("imgClick");
+        });
     $("#gem-1").on("click", function(){
         total = total + gems.index_1;
         $("#total").text(total);  
         $("#gem-1").attr("data-clicked", "1");
         checkWin();      
     });
+    $("#gem-2").mousedown(function() {       
+        $("#gem-2").addClass("imgClick");
+      });
+    $("#gem-2").mouseup(function() {      
+        $("#gem-2").removeClass("imgClick");
+        });
     $("#gem-2").on("click", function(){
         total = total + gems.index_2;
         $("#total").text(total);    
         $("#gem-2").attr("data-clicked", "1");
         checkWin();        
     });
+    $("#gem-3").mousedown(function() {       
+        $("#gem-3").addClass("imgClick");
+      });
+    $("#gem-3").mouseup(function() {      
+        $("#gem-3").removeClass("imgClick");
+        });
     $("#gem-3").on("click", function(){
         total = total + gems.index_3;
         $("#total").text(total);  
         $("#gem-3").attr("data-clicked", "1");
         checkWin();          
     });
+    $("#gem-4").mousedown(function() {       
+        $("#gem-4").addClass("imgClick");
+      });
+    $("#gem-4").mouseup(function() {      
+        $("#gem-4").removeClass("imgClick");
+        });
     $("#gem-4").on("click", function(){
         total = total + gems.index_4;
         $("#total").text(total);  

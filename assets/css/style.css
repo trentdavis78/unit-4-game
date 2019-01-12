@@ -27,8 +27,9 @@ a {
     margin: 20px;
     cursor: pointer;
 }
-.gems img:hover {
-    
+.imgClick {
+   height: 65px;
+   margin: 20px 25px !important;
 }
 .gemImgCol {
     padding: 0;
