@@ -138,5 +138,9 @@ $(document).ready(function(){
                 newImg.appendTo("#collection");                          
             }
         }
+        // count children of div#collection and write the count to span#crystalCount
+        var crystalcount = $("#collection").children().length;
+        $("#crystalCount").text(crystalcount);
+        
     }
 });

@@ -48,7 +48,20 @@ a {
     margin: 5px;
 }
 .collectedCrystals {
-    padding: 1rem;       
+    padding: 1rem;    
+    background: #fff;
+    min-height: 339px;
+    border: 1px solid teal;
+    border-radius: 10px;  
+}
+.collectedCrystals h3 {
+    font-style: italic;
+    display: inline;
+    color: teal;
+}
+.collectedCrystals label {
+    float: right;
+    margin: 0;
 }
 .randomNum, .totalScore {
     background: teal;
