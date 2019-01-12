@@ -3,6 +3,9 @@ body {
     background-repeat: repeat;   
     overflow-x: hidden;
 }
+a {
+    cursor: pointer;
+}
 .navbar {
     padding-left: 0;
 }
@@ -26,6 +29,9 @@ body {
 }
 .gems img:hover {
     
+}
+.gemImgCol {
+    padding: 0;
 }
 .instructions {
     padding: 1.5rem;

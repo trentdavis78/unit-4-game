@@ -1,8 +1,4 @@
 $(document).ready(function(){
-    var audio = $("#myAudio")[0];
-    $("#audio").on("click", function(){
-        audio.play();
-    })
     // create game variables
     var win = 0;
     var loss = 0;
