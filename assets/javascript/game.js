@@ -9,6 +9,8 @@ $(document).ready(function(){
     var uniqueRanGem = [];
     var collected;
     var newArr;
+    var winSound = new Audio('assets/sounds/success.wav');
+    
     // inital game html reset win/loss
     $("#win").text("0");
     $("#loss").text("0");
@@ -71,7 +73,7 @@ $(document).ready(function(){
         }   
     }
     // start initial game
-    resetValues();
+    resetValues();   
     // onclick events for crystals --> add gem vars to total --> check if game has won/lost
     $("#gem-1").on("click", function(){
         total = total + gems.index_1;
@@ -100,6 +102,7 @@ $(document).ready(function(){
     // function to check if game has been won
     function checkWin() {
         if(total == random) {
+            playAudio(winSound);
             win++;
             $("#win").text(win);            
             collectCrystals();
@@ -140,5 +143,8 @@ $(document).ready(function(){
         var crystalcount = $("#collection").children('img').length;
         $("#crystalCount").text(crystalcount);
         
+    }
+    function playAudio(a){
+        a.play();
     }
 });
