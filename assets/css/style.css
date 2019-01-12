@@ -3,15 +3,16 @@ body {
     background-repeat: repeat;   
     overflow-x: hidden;
 }
-.header {    
-    padding: 1rem 2rem;
-    font-size: 1.25rem;
-    color: teal;    
+.navbar {
+    padding-left: 0;
 }
-.header h1 {
+.logo  {
     display: inline;
     font-family: 'Fascinate', cursive;
-    font-size: 1.5rem;
+    color: teal !important;  
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    
 }
 .body-content {
  background: #f3f3f3;
