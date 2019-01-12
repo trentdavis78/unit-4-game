@@ -10,6 +10,8 @@ $(document).ready(function(){
     var collected;
     var newArr;
     var winSound = new Audio('assets/sounds/success.wav');
+    var loseSound = new Audio('assets/sounds/lost.wav');
+    var gemClick = new Audio('assets/sounds/gemClick.wav');
     
     // inital game html reset win/loss
     $("#win").text("0");
@@ -76,24 +78,28 @@ $(document).ready(function(){
     resetValues();   
     // onclick events for crystals --> add gem vars to total --> check if game has won/lost
     $("#gem-1").on("click", function(){
+        playAudio(gemClick);
         total = total + gems.index_1;
         $("#total").text(total);  
         $("#gem-1").attr("data-clicked", "1");
         checkWin();      
     });
     $("#gem-2").on("click", function(){
+        playAudio(gemClick);
         total = total + gems.index_2;
         $("#total").text(total);    
         $("#gem-2").attr("data-clicked", "1");
         checkWin();        
     });
     $("#gem-3").on("click", function(){
+        playAudio(gemClick);
         total = total + gems.index_3;
         $("#total").text(total);  
         $("#gem-3").attr("data-clicked", "1");
         checkWin();          
     });
     $("#gem-4").on("click", function(){
+        playAudio(gemClick);
         total = total + gems.index_4;
         $("#total").text(total);  
         $("#gem-4").attr("data-clicked", "1");
@@ -109,6 +115,7 @@ $(document).ready(function(){
             resetValues();
         } 
         else if(total > random) {
+            playAudio(loseSound);
             loss++;
             $("#loss").text(loss);            
             resetValues();
