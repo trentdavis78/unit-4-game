@@ -139,7 +139,7 @@ $(document).ready(function(){
             }
         }
         // count children of div#collection and write the count to span#crystalCount
-        var crystalcount = $("#collection").children().length;
+        var crystalcount = $("#collection").children('img').length;
         $("#crystalCount").text(crystalcount);
         
     }
