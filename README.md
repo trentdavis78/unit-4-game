@@ -1,6 +1,6 @@
 # Crystals Collector Game
 
-![Game Demo Image](https://trentdavis78.github.io/unit-4-game/assets/images/demo.jpg "Word Guess Game - Football Edition")
+![Game Demo Image](https://trentdavis78.github.io/unit-4-game/assets/images/demo.jpg "Crystal Collectors Game")
 
 ## How To Play
 ---
